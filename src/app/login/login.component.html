@@ -3,7 +3,7 @@
 
   <div class="form-wrap">
     <form [formGroup]="loginForm">
-      <div *ngIf="!loginForm.valid">Invalid form</div>
+      <div *ngIf="invalidForm" class="warning">Invalid form</div>
       <div class="input-container">
         <label class="input-label">Name</label>
         <input class="input" type="text" placeholder="Name" formControlName="name">

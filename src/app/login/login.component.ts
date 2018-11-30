@@ -13,6 +13,7 @@ export class LoginComponent implements OnInit {
   public name: string;
   public email: string;
   public password: string;
+  public invalidForm = false;
 
   constructor(
     private fb: FormBuilder,
@@ -41,12 +42,13 @@ export class LoginComponent implements OnInit {
   }
 
   public onBtnClick(): void {
-    this.router.navigate(['home']);
     if (this.loginForm.valid) {
       this.dateStorageService.toLocalStorage('name', this.name);
       this.dateStorageService.toLocalStorage('email', this.email);
       this.dateStorageService.toLocalStorage('password', this.password);
       this.router.navigate(['home']);
+    } else {
+      this.invalidForm = true;
     }
   }
 
