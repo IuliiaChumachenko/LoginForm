@@ -1,0 +1,44 @@
+.container {
+  margin: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .3);
+}
+
+.header {
+  box-sizing: border-box;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #777;
+
+  .header-item {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .header-btn {
+    background-color: #777;
+    color: white;
+    box-sizing: border-box;
+    padding: 10px 20px;
+  }
+}
+
+.main {
+  height: calc(100vh - 110px);
+  background-color: #faf9f9;
+  position: relative;
+
+  .main-picture {
+    background-image: url('./img/nat-6.jpg');
+    width: calc((100vw - 40px)/2);
+    height: calc((100vw - 100px)/2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
