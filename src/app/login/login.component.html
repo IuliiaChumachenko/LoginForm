@@ -1,0 +1,24 @@
+<div class="login-wrap">
+  <h1 class="login-title">Please log in:</h1>
+
+  <div class="form-wrap">
+    <form [formGroup]="loginForm">
+      <div *ngIf="!loginForm.valid">Invalid form</div>
+      <div class="input-container">
+        <label class="input-label">Name</label>
+        <input class="input" type="text" placeholder="Name" formControlName="name">
+      </div>
+      <div class="input-container">
+        <label class="input-label">Email</label>
+        <input class="input" type="text" placeholder="Email" formControlName="email">
+      </div>
+      <div class="input-container">
+        <label class="input-label">Password</label>
+        <input class="input" type="password" placeholder="Password" formControlName="password">
+      </div>
+      <div>
+        <input class="form-btn" type="button" value="Войти" (click)="onBtnClick()">
+      </div>
+    </form>
+  </div>
+</div>
